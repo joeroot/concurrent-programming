@@ -13,7 +13,6 @@ object GameOfLife {
                      0 0 1 0 0
                      0 0 1 0 0
                      0 0 1 0 0
-                     0 0 1 0 0
                      0 0 0 0 0""",
 
     "toad" ->   """0 0 0 0 0 0
@@ -106,7 +105,7 @@ object GameOfLife {
   val toCollector   = ManyOne[List[(Point, Boolean)]];
 
   def Distributor = proc {
-    loadPattern("pulsar");
+    loadPattern("blinker");
     val display = new Display(N,a);
     var paritions = parition();
     repeat {
